@@ -1,0 +1,33 @@
+schema = 1
+backend = "c"
+source = "native"
+
+[artifact]
+name = "forcesniff_quickjs"
+asset = "src/third_party/session_native.g.dart"
+
+[c]
+sources = [
+  "quickjs/quickjs_runtime.c",
+  "quickjs/vendor/quickjs.c",
+  "quickjs/vendor/dtoa.c",
+  "quickjs/vendor/libregexp.c",
+  "quickjs/vendor/libunicode.c",
+  "quickjs/vendor/cutils.c",
+]
+includes = ["quickjs/vendor"]
+
+[c.defines]
+_GNU_SOURCE = ""
+CONFIG_VERSION = '"2026-06-04"'
+
+[build]
+platforms = ["macos"]
+macos_universal = false
+
+[apple]
+macos_deployment_target = "11.0"
+
+[prebuild]
+compressed = true
+write = true

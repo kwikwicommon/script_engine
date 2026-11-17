@@ -1,0 +1,26 @@
+name: script_engine
+description: QuickJS traffic script engine with program storage, budgets, and execution.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: '>=3.14.0 <4.0.0'
+  flutter: '>=3.50.0'
+
+dependencies:
+  code_assets: ^2.1.0
+  hooks: ^2.2.0
+  meta: ^1.17.0
+  ffi: ^2.1.4
+  flutter_native_build:
+    git:
+      url: https://github.com/kwikwicommon/flutter_native_build.git
+      ref: main
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  ffigen: ^23.0.0
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

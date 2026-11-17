@@ -1,0 +1,7 @@
+.dart_tool/
+.packages
+build/
+/native/target/
+pubspec.lock
+/hook/native-build.local.toml
+pubspec_overrides.yaml
